@@ -1,4 +1,8 @@
+import { JokeService } from './joke.service';
+
 import { Component } from '@angular/core';
+import { Joke } from './joke.model';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'dadJoke';
+  storeJoke: Joke[] = [];
+
+  constructor(private jokeService: JokeService){}
+
+  fetchJoke(){
+    this.jokeService.getJoke().subscribe(response =>{
+      this.storeJoke = response
+      console.log(response);
+    });
+  }
+
 }
