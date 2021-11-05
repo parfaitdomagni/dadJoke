@@ -4,7 +4,7 @@
       <button class="btn btn-primary" (click) ="fetchJoke()">Favorite</button>
       <button class="btn btn-secondary">Refresh</button>
 
-      <div class="card-header">
+      <div class="card-header" *ngIf="storeJoke">
         <p>{{storeJoke.joke}}</p>
       </div>
     </div>

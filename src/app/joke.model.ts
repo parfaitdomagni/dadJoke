@@ -1,3 +1,3 @@
 export class Joke{
-  constructor(id: string, joke: string, status?: number){}
+  constructor(public id: string, public joke: string, public status?: number){}
 }

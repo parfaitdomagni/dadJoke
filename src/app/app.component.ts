@@ -10,7 +10,7 @@ import { Joke } from './joke.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  storeJoke: Joke[] = [];
+  storeJoke: Joke;
 
   constructor(private jokeService: JokeService){}
 
